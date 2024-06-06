@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Birds of a feather Demo</title>
+
+    <meta name="description" content="A small showcase during the birds of a feather session at the IIIF Annual Conference">
+    <meta name="author" content="Zoe Schubert">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css" id="theme">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section data-background="assets/img/title_light.png">
+            <br>
+            <br>
+            <br>
+            <p>... 'cause the world is multidimensional</p>
+            <br>
+            <h4>Kompakkt loading IIIF 3D Manifests</h4>
+            <p>Demo implementation with Babylon.js</p>
+            <p><i>Birds of a Feather Session</i></p>
+            <br>
+            <p>
+                <small>
+                    Presented by Zoe Schubert<br>
+                    Berlin State Library | TIB - Leibniz Information Centre for Science & Tech.
+                </small>
+            </p>
+        </section>
+
+        <section data-visibility="hidden">
+            <h2>Overview</h2>
+            <br>
+            <br>
+            <div class="captioned-image-row">
+                <div>
+                    Kompakkt Standalone
+                    <img src="assets/img/alice_entry.png">
+                </div>
+                <div>
+                    Loading 3D Manifests
+                    <img src="assets/img/Bildschirmfoto 2024-06-03 um 23.56.07.png">
+                </div>
+                <div>
+                    Hands-on Viewer
+                    <img src="assets/video/cat_fly.gif">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <section data-background-iframe="https://kompakkt.de" data-background-interactive></section>
+
+            <section data-background-iframe="https://kompakkt.de/entity/6660f2e5466492827f3eaa57"
+                     data-background-interactive></section>
+
+            <section data-visibility="true">
+                <h2>Hidden Slide</h2>
+                <p>
+                    This slide is visible in the source, but hidden when the presentation is viewed. You can show all
+                    hidden slides by setting the `showHiddenSlides` config option to `true`.
+                </p>
+            </section>
+
+            <!-- Live Showcase iframe for Birds here pls -->
+
+            <section>
+                <iframe
+                        style='height: 70vh; width: 100%'
+                        name="Astronaut for IIIF"
+                        src="https://kompakkt.de/viewer/index.html?entity=6660f2e5466492827f3eaa57&mode=open"
+                        allowfullscreen
+                        loading="lazy"
+                ></iframe>
+            </section>
+
+            <!-- Live Showcase iframe for Birds ends here pls -->
+
+            <section data-background-iframe="https://kompakkt.github.io/Info/" data-background-interactive></section>
+
+			<!-- Live Showcase standalone for Birds here pls -->
+
+			<section>
+                <app-kompakkt style='height: 70vh'
+                              endpoint="https://raw.githubusercontent.com/IIIF/3d/main/assets/astronaut"
+                              resource="astronaut.glb">
+                </app-kompakkt>
+            </section>
+
+			<!-- Live Showcase standalone for Birds ends here pls -->
+
+		</section>
+
+    </div>
+
+</div>
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/zoom/zoom.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/search/search.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script type="text/javascript" src="js/kompakkt-standalone.js" defer></script>
+<script>
+
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight]
+    });
+
+</script>
+
+</body>
+</html>
